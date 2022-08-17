@@ -1,0 +1,294 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Paleta: #E1E2E2 , #C5C6C6 , #7A7A7B , #A70016 (Paleta, de gris claro a rojo) */
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a2a2a;
+}
+ul {
+  list-style-type: none;
+}
+.fondo {
+  background-image: linear-gradient(
+    163deg,
+    #c5c6c6 5%,
+    #e1e2e2 42%,
+    #7a7a7b 69%
+  );
+}
+a:hover {
+  color: #a70016;
+}
+.header a {
+  color: white;
+  text-decoration: none;
+}
+.logo {
+  padding: 5px;
+  width: 50px;
+}
+.navBar {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.navBar ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.navBar ul li {
+  display: inline;
+  margin: 5px;
+  padding: 7px 5px 7px 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 550;
+  font-size: 18px;
+}
+/* Main Index*/
+.main-index p {
+  text-align: right;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+  color: #ffffff;
+  word-spacing: 10px;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-left: 25px;
+  background-color: #0000009e;
+}
+.main-index h1 {
+  text-align: center;
+  font-size: 40px;
+  color: #1a1818;
+  padding: 6px;
+  font-family: "Kalam", cursive;
+}
+.logoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  padding: 4px;
+  background-color: white;
+}
+.logoContainer img {
+  width: 150px;
+}
+.banner img {
+  width: 100%;
+}
+.index-img {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-image: url(../images/fondoindex.jpeg);
+}
+/* Main Seguros */
+.tituloH2 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 35px;
+  text-align: center;
+  padding: 15px;
+}
+.grid-seguros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.grid-seguros h3 {
+  font-size: 15px;
+  font-family: "Kalam", cursive;
+}
+.grid-seguros div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+/* Main Novedades */
+.grid-novedades {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.grid-novedades div {
+  height: 320px;
+  overflow: hidden;
+}
+/* Main Servicios */
+.servicios {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.formulariosServicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: #1413136b;
+  border-radius: 20px;
+}
+.txtServicios {
+  font-family: "Kalam", cursive;
+  color: #0d1446;
+  text-align: center;
+}
+.main-servicios {
+  height: 80vh;
+}
+/*Main Contancto */
+.txtContact {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+}
+.contactForm {
+  width: 300px;
+  padding: 16px;
+  border-radius: 20px;
+  margin: auto;
+  background-color: #c5c6c6;
+}
+.contactInput {
+  font-family: "Kalam", cursive;
+  border-radius: 10px;
+  height: 22px;
+  width: 100%;
+  margin: 5px;
+}
+.contactFormButton {
+  font-family: "Kalam", cursive;
+  border-radius: 10px;
+  height: 22px;
+  width: 145px;
+  background-color: #7a7a7b;
+  margin: 5px;
+}
+.ubicacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+/* Footer */
+.footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.footerTxt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footerTxt .footerTxtItem {
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+  margin: 2px;
+  font-family: "Ubuntu", sans-serif;
+}
+.seguinosTxt {
+  font-weight: bold;
+  font-size: 18px;
+  width: 350px;
+  text-align: center;
+  font-family: "Kalam", cursive;
+}
+.redes {
+  width: 80px;
+}
+.ssn {
+  width: 210px;
+  margin: 4px;
+}
+@media(max-width: 845px){
+  .index-img {
+    flex-direction: column;
+    }
+  .main-index p {
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .main-index h1 {
+    font-size: 30px;
+}
+}
+@media(max-width: 730px){
+  .grid-novedades {
+    grid-template-columns: repeat(1, 0.5fr);
+    justify-content: center;
+}
+.grid-novedades div {
+  height: auto;
+}
+.grid-novedades img{
+  width: 200px;
+}
+}
+@media(max-width: 600px){
+.header{
+  flex-direction: column;
+}
+.logo{
+  width:65px ;
+}
+.index-img {
+  background-color: #7a7a7b;
+}
+.index-img img{
+  width: 100%;
+}
+.seguinosTxt{
+  display: none;
+}
+.navBar ul {
+  justify-content: space-evenly;
+}
+.main-index h1 {
+  font-size: 25px;
+}
+}
+@media(max-width: 450px){
+  .navBar ul li {
+    margin: 0;
+    font-size: 15px;
+}
+.logoContainer img {
+  width: 125px;
+}
+.redes {
+  width: 70px;
+}
+.tituloH2 {
+  font-size: 23px;
+ }
+}
