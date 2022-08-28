@@ -374,6 +374,9 @@ h6 {
   .logo {
     width: 200px;
   }
+  .polizas {
+    width: 7rem;
+}
 }
 @media (max-width: 576px) {
   .logoContainer img {
@@ -388,4 +391,10 @@ h6 {
   .logo {
     width: 150px;
   }
+  .polizas {
+    width: 5rem;
+}
+.grid-seguros {
+  grid-template-columns: repeat(2, 1fr);
+}
 }
