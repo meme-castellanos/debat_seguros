@@ -262,7 +262,6 @@ footer i{
 .list-group {
   background-color: inherit;
   align-items: center;
-  background-color: inherit;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -314,15 +313,15 @@ footer i:hover {
     width: 150px;
     margin: 4px;
   }
+  .polizas-txt {
+    width: 200px;
+}
 }
 @media (max-width: 576px) {
   .logoContainer img {
     width: 125px;
   }
-  .redes {
-    width: 70px;
-  }
-  .titulo2 {
+   .titulo2 {
     font-size: 23px;
   }
   .logo {
@@ -334,4 +333,7 @@ footer i:hover {
   .grid-seguros {
     grid-template-columns: repeat(2, 1fr);
   }
+  .polizas-txt {
+    width: 125px;
+}
 }
