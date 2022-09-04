@@ -30,6 +30,7 @@ ul {
   text-shadow: 1px 1px grey;
 }
 
+
 /* HEADER */
 .header {
   display: flex;
@@ -58,7 +59,7 @@ ul {
   width: 150px;
 }
 .header img:hover {
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
   transition: 0.3s;
 }
 /* MAIN INDEX*/
@@ -103,10 +104,7 @@ ul {
 a:hover {
   --bs-link-hover-color: #a70016;
 }
-.fade-in-bck {
-  -webkit-animation: fade-in-bck 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in-bck 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
+
 .logoContainer {
   display: flex;
   flex-wrap: wrap;
@@ -147,21 +145,31 @@ a:hover {
   text-align: center;
   font-weight: bold;
   color: #000000;
-  width: 150px;
+  width: 250px;
   text-shadow: 1px 1px #d3d3d3;
-}
-
-a:hover p {
-  color: #a70016;
 }
 .polizas {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.grid-seguros img:hover {
-  transform: scale(1.2, 1.2);
-  transition: 0.3s;
+
+.hvr-float {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 /* MAIN SERVICIOS */
 .servicios {
@@ -182,6 +190,8 @@ a:hover p {
 .txt-servicios {
   font-family: "Kalam", cursive;
   font-size: 20px;
+  color: #a70016;
+  text-shadow: 1px 1px #423d3d;
 }
 h6 {
   margin-top: 0;
@@ -239,91 +249,53 @@ h6 {
   padding: 15px;
 }
 /* FOOTER */
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-.footer ul {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.footerTxt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.footerTxt .footerTxtItem {
-  font-size: 14px;
-  color: #000000;
-  font-weight: bold;
-  margin: 2px;
-  font-family: "Ubuntu", sans-serif;
-}
-.linea {
-  border-top: 3px solid #a70016;
-  box-shadow: rgb(0 0 0 / 130%) 0px -6px 6px -6px;
-}
 .redes {
-  width: 75px;
+  background-color: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: none;
 }
+footer i{
+  color: #212529;
+}
+.list-group {
+  background-color: inherit;
+  align-items: center;
+  background-color: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0.5rem;
+  --bs-list-group-border-radius: 0rem;
+}
+.linea{
+    border-top: 3px solid #a70016;
+    box-shadow: rgb(0 0 0 / 130%) 0px -6px 6px -6px;
+    
+}
+.list-group-item {
+  background-color: inherit;
+  border: none;
+}
+.footer-txt {
+  font-weight: bold;
+  font-size: 16px;
+  width: 250px;
+  text-align: center;
+  font-family: "Kalam", cursive;
+  background-color: inherit;
+  border: none;
+}
+
 .ssn {
-  width: 210px;
-  margin: 4px;
+  width: 200px;
+  margin: 2px;
 }
-.footer img:hover {
-  transform: scale(1.2, 1.2);
-  transition: 0.3s;
+footer i:hover {
+  color: #a70016;
 }
 /* Keyframes */
-
-@-webkit-keyframes fade-in-bck {
-  0% {
-    -webkit-transform: translateZ(80px);
-    transform: translateZ(80px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1;
-  }
-}
-@keyframes fade-in-bck {
-  0% {
-    -webkit-transform: translateZ(80px);
-    transform: translateZ(80px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
 
 /* MEDIAS QUERIES */
 @media (max-width: 1400px) {
