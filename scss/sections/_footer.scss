@@ -1,0 +1,43 @@
+footer i {
+  color: #212529;
+  &:hover {
+    color: #a70016;
+  }
+}
+.redes {
+  @include flex_center;
+  background-color: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: none;
+}
+.linea {
+  border-top: 3px solid $rojo;
+  box-shadow: 0 -5px 5px -5px #0f0f0f;
+}
+.list-group {
+  @include flex_center;
+  background-color: inherit;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0.5rem;
+  --bs-list-group-border-radius: 0rem;
+  .list-group-item {
+    background-color: inherit;
+    border: none;
+    .ssn {
+      width: 200px;
+      margin: 2px;
+    }
+  }
+  .footer-txt {
+    font-weight: bold;
+    font-size: 16px;
+    width: 250px;
+    text-align: center;
+    font-family: $kalam;
+    background-color: inherit;
+    border: none;
+  }
+}

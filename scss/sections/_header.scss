@@ -1,0 +1,29 @@
+.header {
+  @include flex_center;
+  justify-content: space-between;
+  background-color: rgb(59, 56, 56) !important;
+  min-height: 15vh;
+  .navbar {
+    --bs-navbar-color: rgb(255 253 253 / 90%);
+    .nav-link {
+      font-family: $kalam;
+      font-size: 24px;
+      --bs-nav-link-color: rgb(255 253 253 / 90%);
+      &:hover {
+        --bs-nav-link-hover-color: #ff00229f;
+      }
+    }
+    .navbar-toggler-icon {
+      background-color: #a700168f;
+      border-radius: 4px;
+    }
+  }
+  .logo {
+    padding: 5px;
+    width: 235px;
+  }
+  img:hover {
+    transform: scale(1.1, 1.1);
+    transition: 0.3s;
+  }
+}

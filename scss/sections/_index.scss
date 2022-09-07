@@ -1,0 +1,46 @@
+.container {
+  justify-content: space-around;
+  .col {
+    flex: 1 0 0%;
+    @include flex_center;
+    justify-content: space-around;
+    .carrusel-index {
+      margin: 1rem;
+      width: 22rem;
+      .card-title {
+        margin-bottom: var(--bs-card-title-spacer-y);
+        margin: 10px;
+        font-family: $kalam;
+        color: $rojo;
+        text-shadow: 1px 1px #423d3d;
+        font-size: 24px;
+      }
+      .card-text {
+        margin: 1rem;
+        background: none;
+        color: black;
+        font-size: 18px;
+        font-family: $kalam;
+      }
+      .button {
+        @include button;
+        text-decoration: none;
+        padding: 5px;
+      }
+    }
+  }
+}
+.container a:hover {
+  --bs-link-hover-color: $rojo;
+}
+.logoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  padding: 4px;
+  background-color: #ffffff;
+  img {
+    width: 100px;
+  }
+}

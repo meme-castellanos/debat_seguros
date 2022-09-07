@@ -1,0 +1,49 @@
+$ubuntu: "Ubuntu", sans-serif;
+$kalam: "Kalam", cursive;
+
+//Paleta
+$rojo: #a70016;
+$gris_oscuro: #7a7a7b;
+$gris_medio: #c5c6c6;
+$gris_claro: #e1e2e2;
+
+%titulo_principal {
+  font-family: $kalam;
+  text-align: center;
+  margin: 1rem;
+  color: $rojo;
+  text-shadow: 1px 2px #423d3d;
+}
+%titulo_secundario {
+  font-family: $kalam;
+  margin: 1rem;
+  text-align: center;
+  text-shadow: 1px 1px grey;
+}
+%h_6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  font-family: $kalam;
+  font-size: 24px;
+  color: $rojo;
+  text-shadow: 1px 1px #423d3d;
+  padding: 1rem;
+}
+@mixin flex_center {
+  display: flex;
+  align-items: center;
+}
+@mixin button {
+  border-radius: 8px;
+  background: #383a3a;
+  color: white;
+  box-shadow: 3px -2px 4px 1px $gris_oscuro;
+  font-family: $kalam;
+  border: none;
+  &:hover {
+    color: $rojo;
+  }
+}

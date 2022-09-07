@@ -1,0 +1,341 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Paleta: #E1E2E2 , #C5C6C6 , #7A7A7B , #A70016 (Paleta, de gris claro a rojo) */
+ul {
+  list-style-type: none;
+}
+.fondo {
+  background-image: linear-gradient(
+    163deg,
+    #c5c6c6 5%,
+    #e1e2e2 42%,
+    #7a7a7b 69%
+  );
+}
+.titulo1 {
+  font-family: "Kalam", cursive;
+  text-align: center;
+  margin: 1rem;
+  color: #a70016;
+  text-shadow: 1px 2px #423d3d;
+}
+.titulo2 {
+  font-family: "Kalam", cursive;
+  margin: 1rem;
+  text-align: center;
+  text-shadow: 1px 1px grey;
+}
+
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(59, 56, 56) !important;
+  min-height: 15vh;
+}
+.nav-link {
+  font-family: "Kalam", cursive;
+  font-size: 22px !important;
+  --bs-nav-link-color: rgb(255 253 253 / 90%);
+}
+.navbar {
+  --bs-navbar-color: rgb(255 253 253 / 90%);
+}
+.navbar-toggler-icon {
+  background-color: #a700168f;
+  border-radius: 4px;
+}
+.nav-link:hover {
+  --bs-nav-link-hover-color: #ff00229f;
+}
+
+.logo {
+  padding: 5px;
+  width: 150px;
+}
+.header img:hover {
+  transform: scale(1.1, 1.1);
+  transition: 0.3s;
+}
+/* MAIN INDEX*/
+.container {
+  justify-content: space-around;
+}
+.col {
+  flex: 1 0 0%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.card-title {
+  margin-bottom: var(--bs-card-title-spacer-y);
+  margin: 10px;
+  font-family: "Kalam", cursive;
+  color: #a70016;
+  text-shadow: 1px 1px #423d3d;
+  font-size: 22px;
+}
+.carrusel-index {
+  margin: 1rem;
+  width: 22rem;
+}
+.card-text {
+  margin: 1rem;
+  background: none;
+  color: black;
+  font-size: 15px;
+  font-family: "Kalam", cursive;
+}
+.button {
+  border: solid black 1px;
+  border-radius: 7px;
+  background-color: #2c2b2b;
+  padding: 0.35rem;
+  margin: 0.35rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  --bs-link-hover-color: #a70016;
+}
+
+.logoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  padding: 4px;
+  background-color: #ffffff;
+}
+.logoContainer img {
+  width: 100px;
+}
+/* MAIN PARTICULARES */ /* MAIN EMPRESAS */
+.grid-seguros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  align-self: center;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.grid-seguros div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 12px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+.polizas-txt {
+  font-size: 12px;
+  font-family: inherit;
+  text-align: center;
+  font-weight: bold;
+  color: #000000;
+  width: 250px;
+  text-shadow: 1px 1px #d3d3d3;
+}
+.polizas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hvr-float {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+/* MAIN SERVICIOS */
+.servicios {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.formulariosServicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: #1413136b;
+  border-radius: 20px;
+}
+.txt-servicios {
+  font-family: "Kalam", cursive;
+  font-size: 20px;
+  color: #a70016;
+  text-shadow: 1px 1px #423d3d;
+}
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}
+.polizas {
+  width: 10rem;
+}
+.polizas img {
+  width: 75px;
+}
+.main.servicios {
+  margin-bottom: 2rem;
+}
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.5s linear 1s both;
+  animation: scale-up-center 0.5s linear 1s both;
+}
+/*MAIN CONTACTO */
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #2e2f30;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #2d2d2e40;
+}
+.btn {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #555758;
+  --bs-btn-border-color: #555758;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #555758;
+  --bs-btn-hover-border-color: #555758;
+  width: 100px;
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 16px;
+  border-radius: 20px;
+  margin: auto;
+  border: solid #a70016;
+  margin-top: 20px;
+  max-width: 600px;
+  box-shadow: 3px 3px 3px 2px rgb(0 0 0 / 20%);
+}
+.ubicacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+/* FOOTER */
+.redes {
+  background-color: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: none;
+}
+footer i{
+  color: #212529;
+}
+.list-group {
+  background-color: inherit;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0.5rem;
+  --bs-list-group-border-radius: 0rem;
+}
+.linea{
+    border-top: 3px solid #a70016;
+    box-shadow: rgb(0 0 0 / 130%) 0px -6px 6px -6px;
+    
+}
+.list-group-item {
+  background-color: inherit;
+  border: none;
+}
+.footer-txt {
+  font-weight: bold;
+  font-size: 16px;
+  width: 250px;
+  text-align: center;
+  font-family: "Kalam", cursive;
+  background-color: inherit;
+  border: none;
+}
+
+.ssn {
+  width: 200px;
+  margin: 2px;
+}
+footer i:hover {
+  color: #a70016;
+}
+/* Keyframes */
+
+/* MEDIAS QUERIES */
+@media (max-width: 1400px) {
+  .logo {
+    width: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    width: 200px;
+  }
+  .polizas {
+    width: 7rem;
+  }
+  .ssn {
+    width: 150px;
+    margin: 4px;
+  }
+  .polizas-txt {
+    width: 200px;
+}
+}
+@media (max-width: 576px) {
+  .logoContainer img {
+    width: 125px;
+  }
+   .titulo2 {
+    font-size: 23px;
+  }
+  .logo {
+    width: 150px;
+  }
+  .polizas {
+    width: 5rem;
+  }
+  .grid-seguros {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .polizas-txt {
+    width: 125px;
+}
+}
