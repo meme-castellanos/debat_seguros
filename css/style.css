@@ -97,6 +97,8 @@ main h6 {
       --bs-nav-link-color: rgb(255 253 253 / 90%); }
       .header .navbar .nav-link:hover {
         --bs-nav-link-hover-color: #ff00229f; }
+        .header .navbar .nav-link:hover:active {
+          font-weight: 900; }
     .header .navbar .navbar-toggler-icon {
       background-color: #a700168f;
       border-radius: 4px; }

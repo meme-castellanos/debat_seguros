@@ -11,6 +11,9 @@
       --bs-nav-link-color: rgb(255 253 253 / 90%);
       &:hover {
         --bs-nav-link-hover-color: #ff00229f;
+        &:active{
+          font-weight:900;
+        }
       }
     }
     .navbar-toggler-icon {
