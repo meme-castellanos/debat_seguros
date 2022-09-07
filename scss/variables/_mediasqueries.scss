@@ -25,14 +25,31 @@
     grid-template-columns: repeat(2, 1fr);
     .polizas {
       width: 5rem;
+      margin: 5px;
       .polizas-txt {
-        max-width: 100px;
+        width: 175px;
         margin: 0 auto;
         padding: 3px;
       }
     }
   }
-  i {
+  .formularios i {
     width: 50px;
+  }
+}
+
+@media (max-width: 365px) {
+  .grid-seguros {
+    grid-template-columns: repeat(1, 1fr);
+    .polizas {
+      width: 5rem;
+      main h6 {
+        margin: 0.5rem;
+      }
+      .polizas-txt {
+        max-width: 250px;
+        padding: 3px;
+      }
+    }
   }
 }
