@@ -15,7 +15,15 @@ ul {
     #7a7a7b 69%
   );
 }
-
+header{
+  min-height: 10vh
+}
+main{
+  min-height: 80vh
+}
+footer{
+  min-height: 10vh
+}
 main h1 {
   @extend %titulo_principal;
 }

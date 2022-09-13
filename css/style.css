@@ -10,6 +10,15 @@ ul {
 .fondo {
   background-image: linear-gradient(163deg, #c5c6c6 5%, #e1e2e2 42%, #7a7a7b 69%); }
 
+header {
+  min-height: 10vh; }
+
+main {
+  min-height: 80vh; }
+
+footer {
+  min-height: 10vh; }
+
 main h1 {
   font-family: "Kalam", cursive;
   text-align: center;
@@ -287,10 +296,12 @@ footer i {
     margin: 4px; } }
 
 @media (max-width: 576px) {
-  .logoContainer img {
-    width: 125px; }
   .header .logo {
     width: 175px; }
+  .header .navbar .nav-link {
+    font-size: 18px; }
+  .logoContainer img {
+    width: 125px; }
   .grid-seguros {
     grid-template-columns: repeat(2, 1fr); }
     .grid-seguros .polizas {

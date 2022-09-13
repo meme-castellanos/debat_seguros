@@ -14,13 +14,15 @@
   }
 }
 @media (max-width: 576px) {
-  .logoContainer img {
-    width: 125px;
-  }
   .header .logo {
     width: 175px;
   }
-
+  .header .navbar .nav-link {
+    font-size: 18px;
+}
+  .logoContainer img {
+    width: 125px;
+  }
   .grid-seguros {
     grid-template-columns: repeat(2, 1fr);
     .polizas {
