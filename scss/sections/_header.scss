@@ -1,32 +1,64 @@
 .header {
-  @include flex_center;
-  justify-content: space-between;
-  background-color: rgb(59, 56, 56) !important;
-  min-height: 15vh;
-  .navbar {
-    --bs-navbar-color: rgb(255 253 253 / 90%);
-    .nav-link {
-      font-family: $kalam;
-      font-size: 24px;
-      --bs-nav-link-color: rgb(255 253 253 / 90%);
-      &:hover {
-        --bs-nav-link-hover-color: #ff00229f;
-        &:active{
-          font-weight:900;
+  background-color: $gris_oscuro;
+  min-height: 10vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    //align-items: center;
+    max-width: 992px;
+    margin: 0 auto;
+    background-color: $gris_oscuro;
+    z-index: 2;
+    .nav_menu {
+      display: flex;
+      margin-right: 40px;
+      list-style-type: none;
+      .nav_item {
+        font-size: 18px;
+        margin: 0px 10px;
+        line-height: 80px;
+        text-transform: uppercase;
+        .nav_item_link {
+          font-family: $ubuntu;
+          color: #ffffff;
+          text-decoration: none;
+          padding: 8px 10px;
+          border-radius: 3px;
+          &:hover {
+            background-color: $rojo;
+            transition: 0.3s;
+            &:active {
+              color: #000000;
+            }
+          }
         }
       }
     }
-    .navbar-toggler-icon {
-      background-color: #a700168f;
-      border-radius: 4px;
+    .logo {
+      padding: 0px 40px;
+      line-height: 80px;
+      img {
+        width: 175px;
+        &:hover {
+          transform: scale(1.2, 1.2);
+          transition: 0.3s;
+        }
+      }
     }
-  }
-  .logo {
-    padding: 5px;
-    width: 235px;
-  }
-  img:hover {
-    transform: scale(1.1, 1.1);
-    transition: 0.3s;
+    .nav_toggle {
+      color: white;
+      background: none;
+      border: none;
+      font-size: 30px;
+      padding: 0 20px;
+      line-height: 60px;
+      display: none;
+      cursor: pointer;
+    }
   }
 }

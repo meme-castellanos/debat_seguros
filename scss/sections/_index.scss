@@ -5,7 +5,8 @@
     @include flex_center;
     justify-content: space-around;
     .carrusel-index {
-      margin: 1rem;
+      margin: 2.5rem;
+      //padding: 1rem;
       width: 22rem;
       .card-title {
         margin-bottom: var(--bs-card-title-spacer-y);

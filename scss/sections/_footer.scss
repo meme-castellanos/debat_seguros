@@ -1,7 +1,10 @@
-footer i {
-  color: #212529;
-  &:hover {
-    color: #a70016;
+footer {
+  background-color: $gris_oscuro;
+  i {
+    color: $gris_claro;
+    &:hover {
+      color: #a70016;
+    }
   }
 }
 .redes {
@@ -21,7 +24,6 @@ footer i {
   background-color: inherit;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0.5rem;
   --bs-list-group-border-radius: 0rem;
   .list-group-item {
     background-color: inherit;
@@ -39,5 +41,6 @@ footer i {
     font-family: $kalam;
     background-color: inherit;
     border: none;
+    color: $gris_claro;
   }
 }
