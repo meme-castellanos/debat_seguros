@@ -10,30 +10,26 @@
         align-items: center;
         margin-right: 20px;
         padding: 20px 0;
+        margin-top: 10px;
         background-color: #361313;
         position: fixed;
-        left: 0;
         top: 60px;
         width: 100%;
         z-index: 1;
         height: calc(100% -60px);
         overflow-y: auto;
-        left: 100%;
+
+        left: 0%;
         transition: left 0.5s;
-        .nav_item_link {
-          font-family: $ubuntu;
-          &:hover {
-            background-color: none;
-            color: #000000;
-            &:active {
-              background-color: #181717;
-              color: #ffffff;
-            }
-          }
+
+        .nav_item_link:hover,
+        :active {
+          background-color: none;
+          color: #000000;
         }
       }
       .nav_menu_visible {
-        left: 0;
+        left: 100%;
       }
       .nav_toggle {
         display: block;
@@ -92,6 +88,9 @@
   }
   .formularios i {
     width: 50px;
+  }
+  .footer-txt {
+    font-size: 12px;
   }
 }
 

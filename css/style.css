@@ -8,6 +8,9 @@
 ul {
   list-style-type: none; }
 
+a {
+  text-decoration: none; }
+
 .fondo {
   background-image: linear-gradient(163deg, #c5c6c6 5%, #e1e2e2 42%, #7a7a7b 69%); }
 
@@ -36,7 +39,7 @@ main h6 {
   line-height: 1.2;
   text-align: center;
   font-family: "Quicksand", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   color: #a70016;
   text-shadow: 1px 1px #423d3d;
   padding: 1rem; }
@@ -114,16 +117,17 @@ main h6 {
         line-height: 80px;
         text-transform: uppercase; }
         .header .nav .nav_menu .nav_item .nav_item_link {
-          font-family: "Ubuntu", sans-serif;
+          font-family: "Spinnaker", sans-serif;
           color: #ffffff;
           text-decoration: none;
           padding: 8px 10px;
-          border-radius: 3px; }
-          .header .nav .nav_menu .nav_item .nav_item_link:hover {
+          border-radius: 3px;
+          font-size: 15px; }
+          .header .nav .nav_menu .nav_item .nav_item_link:hover,
+          .header .nav .nav_menu .nav_item .nav_item_link :active {
             background-color: #a70016;
-            transition: 0.3s; }
-            .header .nav .nav_menu .nav_item .nav_item_link:hover:active {
-              color: #000000; }
+            transition: 0.3s;
+            color: #000000; }
     .header .nav .logo {
       padding: 0px 40px;
       line-height: 80px; }
@@ -176,13 +180,9 @@ footer {
       width: 200px;
       margin: 2px; }
   .list-group .footer-txt {
-    font-weight: bold;
     font-size: 16px;
-    width: 250px;
     text-align: center;
-    font-family: "Quicksand", sans-serif;
-    background-color: inherit;
-    border: none;
+    font-family: "Spinnaker", sans-serif;
     color: #e1e2e2; }
 
 .grid-seguros {
@@ -203,7 +203,7 @@ footer {
     align-content: center;
     flex-wrap: wrap;
     margin: 12px;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Spinnaker", sans-serif;
     font-size: 16px; }
   .grid-seguros .polizas {
     display: flex;
@@ -328,26 +328,22 @@ h2 {
       align-items: center;
       margin-right: 20px;
       padding: 20px 0;
+      margin-top: 10px;
       background-color: #361313;
       position: fixed;
-      left: 0;
       top: 60px;
       width: 100%;
       z-index: 1;
       height: calc(100% -60px);
       overflow-y: auto;
-      left: 100%;
+      left: 0%;
       transition: left 0.5s; }
-      .header .nav .nav_menu .nav_item_link {
-        font-family: "Ubuntu", sans-serif; }
-        .header .nav .nav_menu .nav_item_link:hover {
-          background-color: none;
-          color: #000000; }
-          .header .nav .nav_menu .nav_item_link:hover:active {
-            background-color: #181717;
-            color: #ffffff; }
+      .header .nav .nav_menu .nav_item_link:hover,
+      .header .nav .nav_menu :active {
+        background-color: none;
+        color: #000000; }
     .header .nav .nav_menu_visible {
-      left: 0; }
+      left: 100%; }
     .header .nav .nav_toggle {
       display: block; }
     .header .logo {
@@ -387,7 +383,9 @@ h2 {
         margin: 0 auto;
         padding: 3px; }
   .formularios i {
-    width: 50px; } }
+    width: 50px; }
+  .footer-txt {
+    font-size: 12px; } }
 
 @media (max-width: 365px) {
   .grid-seguros {
