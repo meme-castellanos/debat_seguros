@@ -1,12 +1,13 @@
-.main.servicios {
-  margin-bottom: 2rem;
-}
 .servicios {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 2rem;
   align-items: center;
+  justify-content: space-around;
+  min-height: 400px;
+  max-width: 950px;
+  margin: 0 auto;
 }
 .formulariosServicios {
   display: flex;

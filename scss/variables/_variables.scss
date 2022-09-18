@@ -28,7 +28,7 @@ $gris_claro: #e1e2e2;
   line-height: 1.2;
   text-align: center;
   font-family: $kalam;
-  font-size: 20px;
+  font-size: 25px;
   color: $rojo;
   text-shadow: 1px 1px #423d3d;
   padding: 1rem;
@@ -42,9 +42,11 @@ $gris_claro: #e1e2e2;
   background: #383a3a;
   color: white;
   box-shadow: 3px -2px 4px 1px $gris_oscuro;
-  font-family: $kalam;
+  font-family: $ubuntu;
   border: none;
+  transition: 0.3s;
   &:hover {
-    color: $rojo;
+    transform: scale(0.95, 0.95);
+    transition: 0.3s;
   }
 }

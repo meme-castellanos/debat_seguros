@@ -1,8 +1,8 @@
-h1{
+h1 {
   margin-top: 6rem;
 }
-h2{
-  margin:2rem;
+h2 {
+  margin: 2rem;
 }
 
 .contactForm {
@@ -15,9 +15,10 @@ h2{
   border: solid $rojo;
   margin-top: 20px;
   max-width: 600px;
+  font-family: $ubuntu;
   .button {
-    width: 150px;
-    font-size: 20px;
+    width: 130px;
+    font-size: 18px;
     align-self: center;
     @include button;
   }
@@ -25,10 +26,16 @@ h2{
 .form-control:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #2e2f30;
+  border-color: $gris_oscuro;
   outline: 0;
   box-shadow: 0 0 0 0.25rem #2d2d2e40;
 }
+.form-select:focus {
+  border-color: $gris_oscuro;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #2d2d2e40;
+}
+
 .ubicacion {
   display: flex;
   align-items: center;

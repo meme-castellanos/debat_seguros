@@ -2,7 +2,7 @@
   justify-content: space-around;
   .col {
     flex: 1 0 0%;
-    @include flex_center;
+    display: flex;
     justify-content: space-around;
     .carrusel-index {
       margin: 2.5rem;
@@ -27,6 +27,7 @@
         @include button;
         text-decoration: none;
         padding: 5px;
+        width: 130px;
       }
     }
   }

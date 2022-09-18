@@ -39,7 +39,7 @@ main h6 {
   line-height: 1.2;
   text-align: center;
   font-family: "Quicksand", sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   color: #a70016;
   text-shadow: 1px 1px #423d3d;
   padding: 1rem; }
@@ -49,7 +49,6 @@ main h6 {
   .container .col {
     flex: 1 0 0%;
     display: flex;
-    align-items: center;
     justify-content: space-around; }
     .container .col .carrusel-index {
       margin: 2.5rem;
@@ -72,12 +71,15 @@ main h6 {
         background: #383a3a;
         color: white;
         box-shadow: 3px -2px 4px 1px #222121;
-        font-family: "Quicksand", sans-serif;
+        font-family: "Spinnaker", sans-serif;
         border: none;
+        transition: 0.3s;
         text-decoration: none;
-        padding: 5px; }
+        padding: 5px;
+        width: 130px; }
         .container .col .carrusel-index .button:hover {
-          color: #a70016; }
+          transform: scale(0.95, 0.95);
+          transition: 0.3s; }
 
 .container a:hover {
   --bs-link-hover-color: $rojo; }
@@ -122,7 +124,7 @@ main h6 {
           text-decoration: none;
           padding: 8px 10px;
           border-radius: 3px;
-          font-size: 15px; }
+          font-size: 16px; }
           .header .nav .nav_menu .nav_item .nav_item_link:hover,
           .header .nav .nav_menu .nav_item .nav_item_link :active {
             background-color: #a70016;
@@ -187,66 +189,60 @@ footer {
 
 .grid-seguros {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  justify-items: center;
-  align-content: center;
-  align-self: center;
-  max-width: 950px;
-  margin: 0 auto;
-  padding: 15px; }
-  .grid-seguros .grid-seguros div {
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-auto-rows: minmax(180px, auto);
+  gap: 20px;
+  padding: 20px;
+  grid-auto-flow: dense;
+  max-width: 925px;
+  margin: 0 auto; }
+  .grid-seguros .poliza {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    margin: 12px;
-    font-family: "Spinnaker", sans-serif;
-    font-size: 16px; }
-  .grid-seguros .polizas {
+    border: solid 6px #521f1f;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 6px 4px 6px 2px #363535;
+    padding: 15px; }
+    .grid-seguros .poliza:hover {
+      filter: opacity(0.9);
+      transform: scale(1.04); }
+    .grid-seguros .poliza .polizas-txt {
+      width: 230px;
+      text-align: center;
+      font-weight: bold; }
+    .grid-seguros .poliza i {
+      color: #222121;
+      font-size: 85px;
+      text-shadow: -7px 5px 5px #9f7979; }
+  .grid-seguros .wide {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .grid-seguros .tall {
+    grid-row: span 2;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 10rem; }
-    .grid-seguros .polizas .polizas-txt {
-      font-size: 12px;
-      font-family: inherit;
-      text-align: center;
-      font-weight: bold;
-      color: #000000;
-      width: 250px;
-      text-shadow: 1px 1px #d3d3d3; }
-    .grid-seguros .polizas .hvr-float {
-      display: inline-block;
-      vertical-align: middle;
-      -webkit-transform: perspective(1px) translateZ(0);
-      transform: perspective(1px) translateZ(0);
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-      -webkit-transition-duration: 0.3s;
-      transition-duration: 0.3s;
-      -webkit-transition-property: transform;
-      transition-property: transform;
-      -webkit-transition-timing-function: ease-out;
-      transition-timing-function: ease-out; }
-    .grid-seguros .polizas .hvr-float:hover,
-    .grid-seguros .polizas .hvr-float:focus,
-    .grid-seguros .polizas .hvr-float:active {
-      -webkit-transform: translateY(-8px);
-      transform: translateY(-8px); }
-    .grid-seguros .polizas img {
-      width: 75px; }
-
-.main.servicios {
-  margin-bottom: 2rem; }
+    justify-content: space-around;
+    align-items: center; }
+  .grid-seguros .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
 
 .servicios {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 2rem;
-  align-items: center; }
+  align-items: center;
+  justify-content: space-around;
+  min-height: 400px;
+  max-width: 950px;
+  margin: 0 auto; }
 
 .formulariosServicios {
   display: flex;
@@ -291,24 +287,32 @@ h2 {
   margin: auto;
   border: solid #a70016;
   margin-top: 20px;
-  max-width: 600px; }
+  max-width: 600px;
+  font-family: "Spinnaker", sans-serif; }
   .contactForm .button {
-    width: 150px;
-    font-size: 20px;
+    width: 130px;
+    font-size: 18px;
     align-self: center;
     border-radius: 8px;
     background: #383a3a;
     color: white;
     box-shadow: 3px -2px 4px 1px #222121;
-    font-family: "Quicksand", sans-serif;
-    border: none; }
+    font-family: "Spinnaker", sans-serif;
+    border: none;
+    transition: 0.3s; }
     .contactForm .button:hover {
-      color: #a70016; }
+      transform: scale(0.95, 0.95);
+      transition: 0.3s; }
 
 .form-control:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #2e2f30;
+  border-color: #222121;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #2d2d2e40; }
+
+.form-select:focus {
+  border-color: #222121;
   outline: 0;
   box-shadow: 0 0 0 0.25rem #2d2d2e40; }
 
@@ -355,6 +359,10 @@ h2 {
   h1 {
     margin-top: 0rem; } }
 
+@media (max-width: 860px) {
+  .servicios {
+    flex-direction: column; } }
+
 @media (max-width: 768px) {
   .header .logo {
     width: 200px; }
@@ -374,16 +382,16 @@ h2 {
   .logoContainer img {
     width: 125px; }
   .grid-seguros {
-    grid-template-columns: repeat(2, 1fr); }
-    .grid-seguros .polizas {
-      width: 5rem;
-      margin: 5px; }
-      .grid-seguros .polizas .polizas-txt {
-        width: 175px;
-        margin: 0 auto;
-        padding: 3px; }
-  .formularios i {
-    width: 50px; }
+    grid-template-columns: repeat(1, 1fr); }
+    .grid-seguros .wide {
+      grid-column: span 1;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+    .grid-seguros .tall {
+      grid-row: span 1; }
+  .contactForm {
+    margin: 10px; }
   .footer-txt {
     font-size: 12px; } }
 

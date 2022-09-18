@@ -2,6 +2,7 @@
   body {
     padding-top: 70px;
   }
+  //HEADER
   .header {
     height: 60px;
     .nav {
@@ -44,11 +45,16 @@
       }
     }
   }
+  //TITULOS PRINCIPALES
   h1 {
     margin-top: 0rem;
   }
 }
-
+@media (max-width: 860px){
+  .servicios {
+    flex-direction: column;
+}
+}
 @media (max-width: 768px) {
   .header .logo {
     width: 200px;
@@ -71,30 +77,35 @@
   .header .navbar .nav-link {
     font-size: 18px;
   }
+  //INDEX
   .logoContainer img {
     width: 125px;
   }
+  //GRID PARTICULARES Y EMPRESAS
   .grid-seguros {
-    grid-template-columns: repeat(2, 1fr);
-    .polizas {
-      width: 5rem;
-      margin: 5px;
-      .polizas-txt {
-        width: 175px;
-        margin: 0 auto;
-        padding: 3px;
-      }
+    grid-template-columns: repeat(1, 1fr);
+    .wide {
+      grid-column: span 1;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .tall {
+      grid-row: span 1;
     }
   }
-  .formularios i {
-    width: 50px;
-  }
-  .footer-txt {
+  
+  //CONTACTO
+  .contactForm {
+    margin: 10px;
+}
+.footer-txt {
     font-size: 12px;
   }
 }
 
 @media (max-width: 365px) {
+  //GRID PARTICULARES Y EMPRESAS
   .grid-seguros {
     grid-template-columns: repeat(1, 1fr);
     .polizas {
