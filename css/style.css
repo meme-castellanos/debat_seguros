@@ -233,6 +233,71 @@ footer {
     justify-content: space-around;
     align-items: center; }
 
+.grid-particulares {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-auto-rows: minmax(225px, auto);
+  gap: 20px;
+  padding: 20px;
+  grid-auto-flow: dense;
+  max-width: 950px;
+  margin: 0 auto; }
+  .grid-particulares .poliza {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .grid-particulares .poliza .cards {
+      position: relative;
+      width: 280px;
+      height: 300px;
+      margin: 10px; }
+      .grid-particulares .poliza .cards .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: 0.5s; }
+      .grid-particulares .poliza .cards .front {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 6px 4px 6px 2px #333;
+        justify-content: space-around;
+        transform: perspective(600px) rotateY(0deg); }
+        .grid-particulares .poliza .cards .front i {
+          font-size: 125px;
+          color: #222121;
+          text-shadow: -7px 5px 5px #9f7979; }
+        .grid-particulares .poliza .cards .front h6 {
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+          font-size: 25px; }
+      .grid-particulares .poliza .cards .back {
+        transform: perspective(600px) rotateY(180deg);
+        background-image: linear-gradient(163deg, #c5c6c6 5%, #e1e2e2 42%, #7a7a7b 69%);
+        padding: 15px;
+        color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        box-shadow: 6px 4px 6px 2px #333; }
+        .grid-particulares .poliza .cards .back h6 {
+          font-size: 25px;
+          margin-top: 20px;
+          text-align: center; }
+        .grid-particulares .poliza .cards .back p {
+          letter-spacing: 1px;
+          color: #000000;
+          font-weight: bold; }
+    .grid-particulares .poliza:hover .front {
+      transform: perspective(600px) rotateY(180deg); }
+    .grid-particulares .poliza:hover .back {
+      transform: perspective(600px) rotateY(360deg); }
+
 .servicios {
   display: flex;
   flex-direction: row;
