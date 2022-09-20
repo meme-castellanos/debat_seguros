@@ -50,10 +50,10 @@
     margin-top: 0rem;
   }
 }
-@media (max-width: 860px){
+@media (max-width: 860px) {
   .servicios {
     flex-direction: column;
-}
+  }
 }
 @media (max-width: 768px) {
   .header .logo {
@@ -94,12 +94,12 @@
       grid-row: span 1;
     }
   }
-  
+
   //CONTACTO
   .contactForm {
     margin: 10px;
-}
-.footer-txt {
+  }
+  .footer-txt {
     font-size: 12px;
   }
 }
