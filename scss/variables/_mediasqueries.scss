@@ -22,12 +22,6 @@
 
         left: 0%;
         transition: left 0.5s;
-
-        .nav_item_link:hover,
-        :active {
-          background-color: none;
-          color: #000000;
-        }
       }
       .nav_menu_visible {
         left: 100%;

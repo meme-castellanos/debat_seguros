@@ -18,7 +18,7 @@
     transition: transform 0.3s ease-in-out;
     box-shadow: 6px 4px 6px 2px #363535;
     padding: 15px;
-
+    
     &:hover {
       filter: opacity(0.9);
       transform: scale(1.04);
@@ -38,7 +38,7 @@
   .wide {
     grid-column: span 2;
     display: flex;
-    justify-content: stretch;
+    justify-content: space-around;
     align-items: center;
   }
   .tall {
@@ -65,6 +65,7 @@
   grid-auto-flow: dense;
   max-width: 950px;
   margin: 0 auto;
+  
 
   .poliza {
     display: flex;
@@ -89,6 +90,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-image: url(https://img.freepik.com/foto-gratis/muro-cemento_1154-642.jpg?size=626&ext=jpg&ga=GA1.2.493745402.1639701079);
         box-shadow: 6px 4px 6px 2px #333;
         justify-content: space-around;
         transform: perspective(600px) rotateY(0deg);
@@ -105,20 +107,19 @@
       }
       .back {
         transform: perspective(600px) rotateY(180deg);
-        background-image: url(https://img.freepik.com/foto-gratis/fondo-gris-pintado_53876-94041.jpg?w=740&t=st=1663632306~exp=1663632906~hmac=70d71405783b8033d1eff3c093ad068bdd3d468d94c6ddf75b7a51dda083bdc1);
-        padding: auto;
-        color: #f3f3f3;
+        background-image: url(https://img.freepik.com/foto-gratis/muro-cemento_1154-642.jpg?size=626&ext=jpg&ga=GA1.2.493745402.1639701079);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         text-align: center;
         box-shadow: 6px 4px 6px 2px #333;
 
         h6 {
-          font-size: 22px;
+          font-size: 25px;
           margin-top: 20px;
           text-align: center;
-          color: #000000;
+          color: $rojo;
+          text-shadow: 1px 1px #423d3d;
         }
         p {
           color: #000000;
