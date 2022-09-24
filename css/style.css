@@ -227,9 +227,10 @@ footer {
       filter: opacity(0.9);
       transform: scale(1.04); }
     .grid-seguros .poliza .polizas-txt {
-      width: 230px;
+      width: 220px;
       text-align: center;
-      font-weight: bold; }
+      font-weight: bold;
+      margin: 20px; }
     .grid-seguros .poliza i {
       color: #222121;
       font-size: 85px;
@@ -323,7 +324,7 @@ footer {
   margin-bottom: 2rem;
   align-items: center;
   justify-content: space-around;
-  min-height: 500px;
+  min-height: 400px;
   max-width: 950px;
   margin: 0 auto; }
 
@@ -428,6 +429,12 @@ h3 {
   75% {
     opacity: 0; } }
 
+@keyframes toggler {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
 @media (max-width: 992px) {
   body {
     padding-top: 70px; }
@@ -452,6 +459,11 @@ h3 {
       left: 100%; }
     .header .nav .nav_toggle {
       display: block; }
+      .header .nav .nav_toggle i {
+        background-color: #444343;
+        padding: 8px;
+        border-radius: 50%;
+        animation: toggler 1s ease-in 4ms 1 alternate-reverse backwards; }
     .header .logo {
       padding: 0px 20px;
       line-height: 60px; }

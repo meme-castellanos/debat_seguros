@@ -28,6 +28,12 @@
       }
       .nav_toggle {
         display: block;
+        i {
+          background-color: rgb(68, 67, 67);
+          padding: 8px;
+          border-radius: 50%;
+          animation: toggler 1s ease-in 4ms 1 alternate-reverse backwards;
+        }
       }
     }
     .logo {
@@ -55,7 +61,6 @@
       animation: servicios 3s ease-in 5ms 1 reverse backwards;
     }
   }
-  
 }
 @media (max-width: 860px) {
   .servicios {
