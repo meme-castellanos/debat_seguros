@@ -406,6 +406,13 @@ h2 {
   outline: 0;
   box-shadow: 0 0 0 0.25rem #2d2d2e40; }
 
+h3 {
+  font-family: "Spinnaker", sans-serif;
+  font-size: 20px;
+  margin: 10px;
+  text-shadow: 0 0 0 0.25rem #2d2d2e40;
+  text-align: center; }
+
 .ubicacion {
   display: flex;
   align-items: center;
