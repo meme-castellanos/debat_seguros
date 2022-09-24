@@ -71,7 +71,7 @@ main h6 {
         box-shadow: 3px -2px 4px 1px #222121;
         font-family: "Spinnaker", sans-serif;
         border: none;
-        transition: 0.3s;
+        transition: 0.5s;
         text-decoration: none;
         padding: 5px;
         width: 130px; }
@@ -81,6 +81,26 @@ main h6 {
 
 .container a:hover {
   --bs-link-hover-color: $rojo; }
+
+.cotizar-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 15px;
+  margin-bottom: 20px; }
+  .cotizar-index .boton {
+    border-radius: 8px;
+    background: #383a3a;
+    color: white;
+    box-shadow: 3px -2px 4px 1px #222121;
+    font-family: "Spinnaker", sans-serif;
+    border: none;
+    transition: 0.5s;
+    padding: 8px; }
+    .cotizar-index .boton:hover {
+      transform: scale(0.95, 0.95);
+      transition: 0.3s; }
 
 .logoContainer {
   display: flex;
@@ -369,7 +389,7 @@ h2 {
     box-shadow: 3px -2px 4px 1px #222121;
     font-family: "Spinnaker", sans-serif;
     border: none;
-    transition: 0.3s; }
+    transition: 0.5s; }
     .contactForm .button:hover {
       transform: scale(0.95, 0.95);
       transition: 0.3s; }
@@ -391,6 +411,15 @@ h2 {
   align-items: center;
   justify-content: center;
   padding: 15px; }
+
+@keyframes servicios {
+  0%,
+  50%,
+  100% {
+    opacity: 1; }
+  25%,
+  75% {
+    opacity: 0; } }
 
 @media (max-width: 992px) {
   body {
@@ -423,7 +452,16 @@ h2 {
         width: 125px;
         margin-bottom: 10px; }
   h1 {
-    margin-top: 0rem; } }
+    margin-top: 0rem; }
+  .post {
+    height: 250px;
+    margin: 20px;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly; }
+    .post .cover {
+      width: 100%;
+      animation: servicios 3s ease-in 5ms 1 reverse backwards; } }
 
 @media (max-width: 860px) {
   .servicios {

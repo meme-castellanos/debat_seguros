@@ -44,7 +44,7 @@ $gris_claro: #e1e2e2;
   box-shadow: 3px -2px 4px 1px $gris_oscuro;
   font-family: $ubuntu;
   border: none;
-  transition: 0.3s;
+  transition: 0.5s;
   &:hover {
     transform: scale(0.95, 0.95);
     transition: 0.3s;

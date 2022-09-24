@@ -35,6 +35,19 @@
 .container a:hover {
   --bs-link-hover-color: $rojo;
 }
+.cotizar-index{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 15px;
+  margin-bottom: 20px;
+  .boton{
+    @include button;
+    padding: 8px;
+  }
+
+}
 .logoContainer {
   display: flex;
   flex-wrap: wrap;
