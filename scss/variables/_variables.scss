@@ -40,11 +40,14 @@ $gris_claro: #e1e2e2;
   background: #383a3a;
   color: white;
   box-shadow: 3px -2px 4px 1px $gris_oscuro;
-  font-family: $ubuntu;
+  font-family: $kalam;
   border: none;
   transition: 0.5s;
   &:hover {
     transform: scale(0.95, 0.95);
     transition: 0.3s;
+    background: linear-gradient(0deg, #101010 0%, #FFFFFF 100%);
+    color: #101010;
+    font-weight: bold;
   }
 }

@@ -1,3 +1,5 @@
+/////MEDIA 992 ///
+
 @media (max-width: 992px) {
   body {
     padding-top: 70px;
@@ -46,6 +48,10 @@
   h1 {
     margin-top: 0rem;
   }
+  //INDEX
+  .container .col .carrusel-index {
+    margin: 0.5rem;
+  }
   //SERVICIOS
   .post {
     height: 250px;
@@ -59,11 +65,13 @@
     }
   }
 }
+/////MEDIA 904 ///
 @media (max-width: 904px) {
   .grid-particulares {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
 }
+/////MEDIA 865 ///
 @media (max-width: 865px) {
   .servicios {
     flex-direction: column;
@@ -71,7 +79,7 @@
   .grid-particulares {
     .poliza {
       .cards {
-        width: 250px;
+        width: 100%;
         height: 275px;
         margin: 5px;
         .back {
@@ -87,10 +95,12 @@
     }
   }
 }
+/////MEDIA 768 ///
 @media (max-width: 768px) {
   .header .logo {
     width: 200px;
   }
+  ///EMPRESAS
   .polizas {
     width: 7rem;
     .polizas-txt {
@@ -102,6 +112,7 @@
     margin: 4px;
   }
 }
+/////MEDIA 739 ///
 @media (max-width: 739px) {
   //GRID PARTICULARES
   .grid-particulares {
@@ -113,6 +124,9 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
+
+/////MEDIA 576 ///
+
 @media (max-width: 576px) {
   .header .logo {
     width: 175px;
@@ -124,6 +138,9 @@
   .logoContainer img {
     width: 125px;
   }
+  .row {
+    flex-direction: column;
+  }
 
   //CONTACTO
   .contactForm {
@@ -133,6 +150,7 @@
     font-size: 12px;
   }
 }
+/////MEDIA 459 ///
 @media (max-width: 459px) {
   .grid-particulares {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -142,7 +160,7 @@
     grid-auto-rows: minmax(150px, auto);
     gap: 10px;
     padding: 10px;
-    .poliza h6{
+    .poliza h6 {
       font-size: 20px;
     }
     .polizas-txt {
@@ -158,6 +176,17 @@
     }
   }
 }
-@media (max-width: 365px) {
- 
+/////MEDIA 385 ///
+@media (max-width: 385px) {
+  .grid-particulares {
+    .poliza {
+      .cards {
+        .front {
+          h6 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
 }

@@ -39,12 +39,12 @@
         <form class="contactForm" action="https://formsubmit.co/oficinalugones@gmail.com" method="POST">
             <div class="form-floating">
                 <input type="text" class="form-control" id="floatingInput" placeholder="Nombre y Apellido"
-                    name="Nombre y apellido">
+                    name="Nombre y apellido" required>
                 <label for="floatingInput">Nombre y apellido</label>
             </div>
             <br>
             <div class="form-floating">
-                <select class="form-select" id="floatingSelectGrid" name="Motivo de consulta">
+                <select class="form-select" id="floatingSelectGrid" name="Motivo de consulta" required>
                     <option selected>Despliegue las opciones</option>
                     <option value="1">Cotización de nueva póliza</option>
                     <option value="2">Denunciar un siniestro</option>
@@ -58,7 +58,7 @@
                 <div class="col">
                     <div class="form-floating">
                         <input type="email" class="form-control" id="floatingInputGrid"
-                            placeholder="usuario@ejemplo.com" value="mail@ejemplo.com" name="email">
+                            placeholder="usuario@ejemplo.com" value="tu-mail@mail.com" name="email" required>
                         <label for="floatingInputGrid">E-mail</label>
                     </div>
                 </div>
@@ -66,14 +66,14 @@
                 <div class="col">
                     <div class="form-floating">
                         <input type="tel" class="form-control" id="floatingPassword" placeholder="Número de teléfono"
-                            name="Número de teléfono">
+                            name="Número de teléfono" required>
                         <label for="floatingPassword">Número de teléfono</label>
                     </div>
                 </div>
             </div>
             <br>
             <div class="form-floating">
-                <textarea class="form-control" id="floatingTextarea" name="Comentario"></textarea>
+                <textarea class="form-control" id="floatingTextarea" name="Comentario" required></textarea>
                 <label for="floatingTextarea">Dejanos tu comentario</label>
             </div>
             <br>
