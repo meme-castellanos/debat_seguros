@@ -71,14 +71,15 @@ main h6 {
         box-shadow: 3px -2px 4px 1px #222121;
         font-family: "Quicksand", sans-serif;
         border: none;
-        transition: 0.5s;
+        transition: 0.5s ease all;
+        text-transform: uppercase;
         text-decoration: none;
         padding: 5px;
         width: 130px; }
         .container .col .carrusel-index .button:hover {
           transform: scale(0.95, 0.95);
           transition: 0.3s;
-          background: linear-gradient(0deg, #101010 0%, #FFFFFF 100%);
+          background: linear-gradient(0deg, #101010 0%, #ffffff 100%);
           color: #101010;
           font-weight: bold; }
 
@@ -99,12 +100,13 @@ main h6 {
     box-shadow: 3px -2px 4px 1px #222121;
     font-family: "Quicksand", sans-serif;
     border: none;
-    transition: 0.5s;
+    transition: 0.5s ease all;
+    text-transform: uppercase;
     padding: 8px; }
     .cotizar-index .boton:hover {
       transform: scale(0.95, 0.95);
       transition: 0.3s;
-      background: linear-gradient(0deg, #101010 0%, #FFFFFF 100%);
+      background: linear-gradient(0deg, #101010 0%, #ffffff 100%);
       color: #101010;
       font-weight: bold; }
 
@@ -396,11 +398,12 @@ h2 {
     box-shadow: 3px -2px 4px 1px #222121;
     font-family: "Quicksand", sans-serif;
     border: none;
-    transition: 0.5s; }
+    transition: 0.5s ease all;
+    text-transform: uppercase; }
     .contactForm .button:hover {
       transform: scale(0.95, 0.95);
       transition: 0.3s;
-      background: linear-gradient(0deg, #101010 0%, #FFFFFF 100%);
+      background: linear-gradient(0deg, #101010 0%, #ffffff 100%);
       color: #101010;
       font-weight: bold; }
 
