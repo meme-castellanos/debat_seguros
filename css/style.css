@@ -460,9 +460,6 @@ h3 {
     .header .nav .nav_toggle {
       display: block; }
       .header .nav .nav_toggle i {
-        background-color: #444343;
-        padding: 8px;
-        border-radius: 50%;
         animation: toggler 1s ease-in 4ms 1 alternate-reverse backwards; }
     .header .logo {
       padding: 0px 20px;
@@ -504,6 +501,27 @@ h3 {
     font-size: 18px; }
   .logoContainer img {
     width: 125px; }
+  .grid-particulares {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    gap: 5px;
+    padding: 5px; }
+    .grid-particulares .poliza {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .grid-particulares .poliza .cards {
+        position: relative;
+        width: 150px;
+        height: 250px; }
+        .grid-particulares .poliza .cards .front h6 {
+          font-size: 20px; }
+        .grid-particulares .poliza .cards .back h6 {
+          font-size: 20px;
+          margin-top: 30px; }
+        .grid-particulares .poliza .cards .back p {
+          font-size: 10px; }
   .grid-seguros {
     grid-template-columns: repeat(1, 1fr); }
     .grid-seguros .wide {
