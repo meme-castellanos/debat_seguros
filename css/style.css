@@ -79,9 +79,8 @@ main h6 {
         .container .col .carrusel-index .button:hover {
           transform: scale(0.95, 0.95);
           transition: 0.3s;
-          background: linear-gradient(0deg, #101010 0%, #ffffff 100%);
-          color: #101010;
-          font-weight: bold; }
+          font-weight: bold;
+          text-shadow: 1px 2px #131212; }
 
 .container a:hover {
   --bs-link-hover-color: $rojo; }
@@ -106,9 +105,8 @@ main h6 {
     .cotizar-index .boton:hover {
       transform: scale(0.95, 0.95);
       transition: 0.3s;
-      background: linear-gradient(0deg, #101010 0%, #ffffff 100%);
-      color: #101010;
-      font-weight: bold; }
+      font-weight: bold;
+      text-shadow: 1px 2px #131212; }
 
 .logoContainer {
   display: flex;
@@ -403,9 +401,8 @@ h2 {
     .contactForm .button:hover {
       transform: scale(0.95, 0.95);
       transition: 0.3s;
-      background: linear-gradient(0deg, #101010 0%, #ffffff 100%);
-      color: #101010;
-      font-weight: bold; }
+      font-weight: bold;
+      text-shadow: 1px 2px #131212; }
 
 .form-control:focus {
   color: #212529;
