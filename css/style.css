@@ -12,7 +12,7 @@ a {
   text-decoration: none; }
 
 main {
-  min-height: 80vh;
+  min-height: 90vh;
   background-image: linear-gradient(28deg, #c5c6c6 5%, #e1e2e2 42%, #b8b8bb 69%); }
 
 footer {
@@ -428,6 +428,87 @@ h3 {
   align-items: center;
   justify-content: center;
   padding: 15px; }
+
+.button {
+  border-radius: 8px;
+  background: #383a3a;
+  color: white;
+  box-shadow: 3px -2px 4px 1px #222121;
+  font-family: "Quicksand", sans-serif;
+  border: none;
+  transition: 0.5s ease all;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px;
+  width: 130px;
+  margin-bottom: 12px;
+  margin-top: 10px; }
+  .button:hover {
+    transform: scale(0.95, 0.95);
+    transition: 0.3s;
+    font-weight: bold;
+    text-shadow: 1px 2px #131212; }
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 16px;
+  border-radius: 20px;
+  margin: auto;
+  border: solid #a70016;
+  margin-top: 20px;
+  max-width: 600px;
+  font-family: "Spinnaker", sans-serif; }
+  .contactForm .form-control {
+    padding: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px; }
+  .contactForm .button {
+    width: 130px;
+    font-size: 18px;
+    align-self: center;
+    margin-bottom: 12px auto 12px;
+    border-radius: 8px;
+    background: #383a3a;
+    color: white;
+    box-shadow: 3px -2px 4px 1px #222121;
+    font-family: "Quicksand", sans-serif;
+    border: none;
+    transition: 0.5s ease all;
+    text-transform: uppercase; }
+    .contactForm .button:hover {
+      transform: scale(0.95, 0.95);
+      transition: 0.3s;
+      font-weight: bold;
+      text-shadow: 1px 2px #131212; }
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #222121;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #2d2d2e40; }
+
+.form-select:focus {
+  border-color: #222121;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #2d2d2e40; }
+
+.hidden {
+  display: none; }
+
+.visible {
+  display: block; }
+
+.flexCenter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .flexCenter .menuP {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
 
 @keyframes servicios {
   0%,
