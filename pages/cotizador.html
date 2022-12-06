@@ -38,7 +38,7 @@
 
         <section class="container justify-content-center visible" id="login">
             <h1>Bienvenido!</h1>
-            <form class="contactForm" action="#">
+            <form class="contactForm" action="#" id="ingreso">
                 <div class="form-floating">
                     <div>
                         <label for="email">Email</label>
@@ -77,19 +77,18 @@
                 <input type="tel" name="Teléfono" class="form-control" id="nUserTel" placeholder="Número de teléfono"
                     required>
                 <button class="button" id="btnEnviarDatos" type="submit">Registrarme</button>
-                <button class="button" id="btnVolver" type="button">Volver</button>
+                <button class="button" id="btnVolver" type="reset">Volver</button>
             </form>
-                <div class="container" id="nuevoRegistro">
-
-                </div>
         </section>
+        <div class="flexCenter" id="nuevoRegistro">
 
+        </div>
         <section class="container justify-content-center hidden" id="registrado">
             <h2>Bienvenidos al Sistema de Debat Seguros</h2>
             <div class="container">
-                <form class="flexCenter" action="#">
+                <form class="menuPrincipal" action="#">
                     <div class="menuP">
-                        <label for="cotizar">Consulta por una nueva cotización</label>
+                        <label for="cotizar">Nueva cotización</label>
                         <button type="button" class="button align-content-center" id="btnCotizar">Cotizar</button>
                     </div>
                     <div class="menuP">
@@ -98,12 +97,12 @@
                     </div>
                 </form>
                 <div class="container flexCenter">
-                    <button class="button align-content-center" id="btnSalir" type="button">Volver</button>
+                    <button class="button align-content-center" id="btnSalir" type="reset">Volver</button>
                 </div>
             </div>
         </section>
-        <section>
-            <div class="container hidden" id="mostrarCotizador">
+        <section class="hidden" id="mostrarCotizador">
+            <div class="container">
                 <form action="#" class="container contactForm">
                     <div class="justify-content-center">
                         <label>Ingrese el valor de la suma asegurada</label>
@@ -111,19 +110,19 @@
                         <br>
                         <div class="flexCenter">
                             <button type="button" class="button" id="btnCalcular">Calcular</button>
-                            <button class="button" id="btnExit" type="button">Volver</button>
+                            <button class="button" id="btnBorrar" type="reset">Borrar</button>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="hidden" id="resultadoCuota">
+        </section>
+            <div id="resultadoCuota">
 
             </div>
 
-            <ul class="hidden" id="datosCliente">
+            <ul id="datosCliente">
 
             </ul>
-        </section>
     </main>
     <footer>
         <ul class="list-group redes linea">

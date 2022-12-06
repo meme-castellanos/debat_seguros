@@ -1,6 +1,7 @@
 const registeredUser = document.getElementById("registeredUser"),
   registeredPassword = document.getElementById("registeredPassword"),
   check = document.getElementById("check"),
+  ingreso = document.getElementById("ingreso"),
   btnIngresar = document.getElementById("btnIngresar"),
   login = document.getElementById("login"),
   btnRegistrarse = document.getElementById("btnRegistrarse"),
@@ -19,12 +20,11 @@ const registeredUser = document.getElementById("registeredUser"),
   btnDatos = document.getElementById("btnDatos"),
   btnSalir = document.getElementById("btnSalir"),
   mostrarCotizador = document.getElementById("mostrarCotizador"),
-  sumaIngresada = document.getElementById("sumaIngresada"),
   btnCalcular = document.getElementById("btnCalcular"),
-  btnExit = document.getElementById("btnExit"),
+  btnBorrar = document.getElementById("btnBorrar"),
   resultadoCuota = document.getElementById("resultadoCuota"),
   datosCliente = document.getElementById("datosCliente");
-
+let sumaIngresada = document.getElementById("sumaIngresada");
 class Cliente {
   constructor(
     apellido,
@@ -174,12 +174,48 @@ btnIngresar.addEventListener("click", (e) => {
       registrado.classList.replace("hidden", "visible");
       //Ingresa al cotizador
 
+      btnCotizar.addEventListener("click", (e) => {
+        e.preventDefault();
+        mostrarCotizador.classList.replace('hidden','visible');
+        
+        btnCalcular.addEventListener("click", () => {
+          sumaIngresada = sessionStorage.setItem(
+            "sumaIngresada",
+            JSON.stringify(sumaIngresada.value)
+          );
+          let sumaAsegurada = JSON.parse(
+            sessionStorage.getItem("sumaIngresada")
+          );
+
+          while (sumaAsegurada != 0) {
+            function cotizar(sumaAsegurada) {
+              let coberturaA = 4000;
+              let coberturaB = coberturaA + 0.001 * sumaAsegurada;
+              let premio = coberturaB * 1.21;
+              return premio;
+            }
+            resultadoCuota.innerHTML = `<p>El valor final aproximado de la cuota a pagar, de acuerdo a la suma asegurada ingresada es: $${cotizar(
+              sumaAsegurada
+            )}`;
+            break;
+          }
+        });
+        btnBorrar.addEventListener('click',()=>{
+            resultadoCuota.innerHTML=``;
+            clearStorage(sessionStorage);
+            mostrarCotizador.querySelector("form").reset();
+        })
+      });
+
       //Ingresa a Datos guardados
 
       //Volver
       btnSalir.addEventListener("click", () => {
         login.classList.replace("hidden", "visible");
         registrado.classList.replace("visible", "hidden");
+        mostrarCotizador.classList.replace('visible','hidden');
+        ingreso.reset();
+        resultadoCuota.innerHTML=``;
       });
     } else {
       //cambiar por sweet alert
@@ -205,6 +241,20 @@ btnRegistrarse.addEventListener("click", (e) => {
     clientesDB.push(cliente);
     cliente.asignarId(clientesDB);
     guardarCliente(cliente, localStorage);
-    //Agregar: Mostrar datos guardados en el storage
+    clienteRecuperado = [recuperarCliente(localStorage)];
+
+    newUser.classList.replace("visible", "hidden");
+
+    for (const iterator of clienteRecuperado) {
+      nuevoRegistro.innerHTML = `<p>Los datos registrados son:<br> Apellido: ${iterator.apellido} <br> Nombre: ${iterator.nombre} <br> DNI: ${iterator.dni} <br> e-Mail: ${iterator.mail} <br> Domicilio: ${iterator.domicilio} <br> Teléfono: ${iterator.telefono}</p>`;
+    }
+    //Agregar: sweet alert con gracias por registrarte!
+    setInterval("location.reload()", 10000);
+  });
+  btnVolver.addEventListener("click", () => {
+    login.classList.replace("hidden", "visible");
+    newUser.classList.replace("visible", "hidden");
+    ingreso.reset();
+    newUser.querySelector("form").reset();
   });
 });
