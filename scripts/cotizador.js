@@ -23,8 +23,8 @@ const registeredUser = document.getElementById("registeredUser"),
   btnCalcular = document.getElementById("btnCalcular"),
   btnBorrar = document.getElementById("btnBorrar"),
   resultadoCuota = document.getElementById("resultadoCuota"),
-  datosCliente = document.getElementById("datosCliente");
-let sumaIngresada = document.getElementById("sumaIngresada");
+  datosCliente = document.getElementById("datosCliente"),
+  sumaIngresada = document.getElementById("sumaIngresada");
 class Cliente {
   constructor(
     apellido,
@@ -112,11 +112,10 @@ const clientesDB = [
 ];
 
 //Declaro Funciones
-//1.-Valido usuario y contraseña
+//Valido usuario y contraseña
 
 function validarCliente(clientesDB, mail, dni) {
   let clienteEncontrado = clientesDB.find((cliente) => cliente.mail == mail);
-  console.log(clienteEncontrado);
 
   if (typeof clienteEncontrado === "undefined") {
     return false;
@@ -147,16 +146,26 @@ function guardarCliente(clientesDB, storage) {
 function recuperarCliente(storage) {
   return JSON.parse(storage.getItem("cliente"));
 }
-
+//Borra el storage
 function clearStorage() {
   localStorage.clear();
   sessionStorage.clear();
 }
+
 //Para usuarios registrados
+
 btnIngresar.addEventListener("click", (e) => {
   e.preventDefault();
   if (!registeredUser.value || !registeredPassword.value) {
-    alert("Completa todos los campos");
+    Swal.fire({
+      toast: true,
+      title: "Atención!",
+      text: "Oops! Debes completar los campos",
+      icon: "warning",
+      iconColor: "#a70016",
+      timer: 2000,
+      showConfirmButton: false,
+    });
   } else {
     let user = validarCliente(
       clientesDB,
@@ -169,21 +178,32 @@ btnIngresar.addEventListener("click", (e) => {
       } else {
         guardarCliente(user, sessionStorage);
       }
-      alert("Hola " + user.nombre);
+
+      Swal.fire({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 4000,
+        icon: "success",
+        iconColor: "#a70016",
+        title: "Bienvenid@ " + user.nombre,
+      });
       login.classList.replace("visible", "hidden");
       registrado.classList.replace("hidden", "visible");
       //Ingresa al cotizador
 
       btnCotizar.addEventListener("click", (e) => {
         e.preventDefault();
-        mostrarCotizador.classList.replace('hidden','visible');
-        
-        btnCalcular.addEventListener("click", () => {
-          sumaIngresada = sessionStorage.setItem(
+
+        mostrarCotizador.classList.replace("hidden", "visible");
+
+        btnCalcular.addEventListener("click", (e) => {
+          e.preventDefault();
+          sessionStorage.setItem(
             "sumaIngresada",
             JSON.stringify(sumaIngresada.value)
           );
-          let sumaAsegurada = JSON.parse(
+          const sumaAsegurada = JSON.parse(
             sessionStorage.getItem("sumaIngresada")
           );
 
@@ -196,34 +216,58 @@ btnIngresar.addEventListener("click", (e) => {
             }
             resultadoCuota.innerHTML = `<p>El valor final aproximado de la cuota a pagar, de acuerdo a la suma asegurada ingresada es: $${cotizar(
               sumaAsegurada
-            )}`;
+            )}</p>`;
             break;
           }
         });
-        btnBorrar.addEventListener('click',()=>{
-            resultadoCuota.innerHTML=``;
-            clearStorage(sessionStorage);
-            mostrarCotizador.querySelector("form").reset();
-        })
+        btnBorrar.addEventListener("click", () => {
+          resultadoCuota.innerHTML = ``;
+          mostrarCotizador.querySelector("form").reset();
+        });
       });
 
       //Ingresa a Datos guardados
+
+      btnDatos.addEventListener("click", (e) => {
+        e.preventDefault();
+        let usuario = [];
+        check.checked
+          ? (user = recuperarCliente(localStorage))
+          : (user = recuperarCliente(sessionStorage));
+        console.log(user);
+        for (const atributo in user) {
+          let li = `<li>${atributo}: ${user[atributo]}</li>`;
+          usuario.push(li);
+        }
+        usuario.forEach((element) => {
+          datosCliente.innerHTML += element;
+        });
+      });
 
       //Volver
       btnSalir.addEventListener("click", () => {
         login.classList.replace("hidden", "visible");
         registrado.classList.replace("visible", "hidden");
-        mostrarCotizador.classList.replace('visible','hidden');
+        mostrarCotizador.classList.replace("visible", "hidden");
         ingreso.reset();
-        resultadoCuota.innerHTML=``;
+        resultadoCuota.innerHTML = ``;
+        datosCliente.innerHTML=``;
       });
     } else {
-      //cambiar por sweet alert
-      alert("Usuario no registrado");
+      Swal.fire({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 4000,
+        icon: "error",
+        iconColor: "#a70016",
+        title: "Oops! Parece que no estás registrado",
+      });
     }
   }
 });
-//Para nuevos registros
+//Para nuevos registros de usuarios
+
 btnRegistrarse.addEventListener("click", (e) => {
   e.preventDefault();
   login.classList.replace("visible", "hidden");
@@ -241,15 +285,42 @@ btnRegistrarse.addEventListener("click", (e) => {
     clientesDB.push(cliente);
     cliente.asignarId(clientesDB);
     guardarCliente(cliente, localStorage);
-    clienteRecuperado = [recuperarCliente(localStorage)];
+    let clienteRecuperado = [recuperarCliente(localStorage)];
 
     newUser.classList.replace("visible", "hidden");
 
-    for (const iterator of clienteRecuperado) {
-      nuevoRegistro.innerHTML = `<p>Los datos registrados son:<br> Apellido: ${iterator.apellido} <br> Nombre: ${iterator.nombre} <br> DNI: ${iterator.dni} <br> e-Mail: ${iterator.mail} <br> Domicilio: ${iterator.domicilio} <br> Teléfono: ${iterator.telefono}</p>`;
+    if (
+      !nUserApellido.value ||
+      !nUserName.value ||
+      !nDni.value ||
+      !nUserMail.value ||
+      !nUserDir.value
+    ) {
+      newUser.classList.replace("hidden", "visible");
+      Swal.fire({
+        toast: true,
+        position: "center",
+        showConfirmButton: false,
+        timer: 3000,
+        icon: "warning",
+        iconColor: "#a70016",
+        title: "Completa los campos",
+        timer: 3000,
+      });
+    } else {
+      for (const iterator of clienteRecuperado) {
+        nuevoRegistro.innerHTML = `<p>Los datos registrados son:<br> Apellido: ${iterator.apellido} <br> Nombre: ${iterator.nombre} <br> DNI: ${iterator.dni} <br> e-Mail: ${iterator.mail} <br> Domicilio: ${iterator.domicilio} <br> Teléfono: ${iterator.telefono}</p>`;
+      }
+      Swal.fire({
+        text: "Gracias por registrarte",
+        icon: "success",
+        iconColor: "#a70016",
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+      });
+      setInterval("location.reload()", 3500);
     }
-    //Agregar: sweet alert con gracias por registrarte!
-    setInterval("location.reload()", 10000);
   });
   btnVolver.addEventListener("click", () => {
     login.classList.replace("hidden", "visible");

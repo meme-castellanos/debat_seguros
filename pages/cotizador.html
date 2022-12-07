@@ -35,7 +35,7 @@
         </nav>
     </header>
     <main>
-
+        <!-- Login -->
         <section class="container justify-content-center visible" id="login">
             <h1>Bienvenido!</h1>
             <form class="contactForm" action="#" id="ingreso">
@@ -56,15 +56,16 @@
                     </div>
                 </div>
                 <br>
-                <div class="container form-floating flexCenter" id="registrarse">
+                <div class="container flexCenter" id="registrarse">
                     <label for="registrarse">No tienes cuenta?</label>
+                    <br>
                     <button class="button" id="btnRegistrarse" type="submit" value="Registrarse">Registrate</button>
                 </div>
             </form>
         </section>
-
+        <!-- Registro Nuevo Usuario -->
         <section class="justify-content-center hidden" id="newUser">
-            <h2>Completa los campos para registrarte</h2>
+            <h1>Completa los campos para registrarte</h1>
             <form action="#" class="nUser contactForm">
                 <input type="text" name="Apellido" class="form-control" id="nUserApellido"
                     placeholder="Ingresá tu apellido" required>
@@ -83,16 +84,17 @@
         <div class="flexCenter" id="nuevoRegistro">
 
         </div>
+        <!-- Contenido para usuarios registrados -->
         <section class="container justify-content-center hidden" id="registrado">
-            <h2>Bienvenidos al Sistema de Debat Seguros</h2>
+            <h1>Bienvenidos al Sistema de Debat Seguros</h1>
             <div class="container">
                 <form class="menuPrincipal" action="#">
                     <div class="menuP">
-                        <label for="cotizar">Nueva cotización</label>
+
                         <button type="button" class="button align-content-center" id="btnCotizar">Cotizar</button>
                     </div>
                     <div class="menuP">
-                        <label for="btnDatos">Revisa tus datos</label>
+
                         <button type="button" class="button" id="btnDatos">Datos del Cliente</button>
                     </div>
                 </form>
@@ -116,13 +118,14 @@
                 </form>
             </div>
         </section>
-            <div id="resultadoCuota">
+        <div id="resultadoCuota">
 
-            </div>
-
+        </div>
+        <div class="mostrar">
             <ul id="datosCliente">
 
             </ul>
+        </div>
     </main>
     <footer>
         <ul class="list-group redes linea">
@@ -147,6 +150,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
