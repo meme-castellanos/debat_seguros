@@ -158,6 +158,8 @@ function cerrarSesion() {
   registrado.classList.replace("visible", "hidden");
   mostrarCotizador.classList.replace("visible", "hidden");
   ingreso.reset();
+  newUser.classList.replace("visible", "hidden");
+  newUser.querySelector("form").reset();
   resultadoCuota.innerHTML = ``;
   datosCliente.innerHTML = ``;
   clearStorage(localStorage);
@@ -376,9 +378,6 @@ btnRegistrarse.addEventListener("click", (e) => {
     }
   });
   btnVolver.addEventListener("click", () => {
-    login.classList.replace("hidden", "visible");
-    newUser.classList.replace("visible", "hidden");
-    ingreso.reset();
-    newUser.querySelector("form").reset();
+    cerrarSesion();
   });
 });
