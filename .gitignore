@@ -1,4 +1,5 @@
 node_modules/
 SCSS/
-*.json
+package-lock.json
+package.json
 *.txt

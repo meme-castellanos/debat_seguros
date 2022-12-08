@@ -152,6 +152,18 @@ function clearStorage() {
   sessionStorage.clear();
 }
 
+//Cerrar Sesión
+function cerrarSesion() {
+  login.classList.replace("hidden", "visible");
+  registrado.classList.replace("visible", "hidden");
+  mostrarCotizador.classList.replace("visible", "hidden");
+  ingreso.reset();
+  resultadoCuota.innerHTML = ``;
+  datosCliente.innerHTML = ``;
+  clearStorage(localStorage);
+  clearStorage(sessionStorage);
+}
+
 //Para usuarios registrados
 
 btnIngresar.addEventListener("click", (e) => {
@@ -188,6 +200,27 @@ btnIngresar.addEventListener("click", (e) => {
         iconColor: "#a70016",
         title: "Bienvenid@ " + user.nombre,
       });
+      fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        body: JSON.stringify({
+          body: "Agregamos nuevas promociones, seguinos en las redes para enterarte!!!",
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) =>
+          Swal.fire({
+            title: "Promociones",
+            icon: "info",
+            iconColor: "#a70016",
+            showConfirmButton: false,
+            timer: 3500,
+            text: data.body,
+          })
+        );
+
       login.classList.replace("visible", "hidden");
       registrado.classList.replace("hidden", "visible");
       //Ingresa al cotizador
@@ -196,7 +229,7 @@ btnIngresar.addEventListener("click", (e) => {
         e.preventDefault();
 
         mostrarCotizador.classList.replace("hidden", "visible");
-
+        datosCliente.innerHTML = ``;
         btnCalcular.addEventListener("click", (e) => {
           e.preventDefault();
           sessionStorage.setItem(
@@ -230,29 +263,49 @@ btnIngresar.addEventListener("click", (e) => {
 
       btnDatos.addEventListener("click", (e) => {
         e.preventDefault();
-        let usuario = [];
-        check.checked
-          ? (user = recuperarCliente(localStorage))
-          : (user = recuperarCliente(sessionStorage));
-        console.log(user);
-        for (const atributo in user) {
-          let li = `<li>${atributo}: ${user[atributo]}</li>`;
-          usuario.push(li);
+        resultadoCuota.innerHTML = ``;
+        mostrarCotizador.classList.replace("visible", "hidden");
+        let clienteRegistrado = [];
+        if (check.checked) {
+          clienteRegistrado = [recuperarCliente(localStorage)];
+        } else {
+          clienteRegistrado = [recuperarCliente(sessionStorage)];
         }
-        usuario.forEach((element) => {
-          datosCliente.innerHTML += element;
-        });
+
+        console.log(clienteRegistrado);
+        const usuario = clientesDB.filter(
+          (cliente) => cliente.id == clienteRegistrado
+        );
+        for (const iterator of clienteRegistrado) {
+          datosCliente.innerHTML = `<p>Los datos registrados son:<br> Apellido: ${iterator.apellido} <br> Nombre: ${iterator.nombre} <br> DNI: ${iterator.dni} <br> e-Mail: ${iterator.mail} <br> Domicilio: ${iterator.domicilio} <br> Teléfono: ${iterator.telefono}</p>`;
+        }
+        console.log(usuario);
       });
 
-      //Volver
+      //Volver al login desde registrados
       btnSalir.addEventListener("click", () => {
         login.classList.replace("hidden", "visible");
         registrado.classList.replace("visible", "hidden");
         mostrarCotizador.classList.replace("visible", "hidden");
         ingreso.reset();
         resultadoCuota.innerHTML = ``;
-        datosCliente.innerHTML=``;
+        datosCliente.innerHTML = ``;
+        clearStorage(localStorage);
+        clearStorage(sessionStorage);
       });
+      //Inactivo por 10 min, cierra la sesión
+      //Ver de poner un if para saber si hizo click en la pantalla?
+      setTimeout(() => {
+        Swal.fire({
+          toast: true,
+          text: "Oops! La sesión ha expirado, ingresa nuevamente",
+          icon: "error",
+          showConfirmButton: false,
+          iconColor: "#a70016",
+          timer: 3500,
+        });
+        cerrarSesion();
+      }, 600000);
     } else {
       Swal.fire({
         toast: true,
@@ -266,7 +319,7 @@ btnIngresar.addEventListener("click", (e) => {
     }
   }
 });
-//Para nuevos registros de usuarios
+//Para nuevo registro de usuario
 
 btnRegistrarse.addEventListener("click", (e) => {
   e.preventDefault();
@@ -319,7 +372,7 @@ btnRegistrarse.addEventListener("click", (e) => {
         position: "top-end",
         showConfirmButton: false,
       });
-      setInterval("location.reload()", 3500);
+      setInterval("location.reload()", 4000);
     }
   });
   btnVolver.addEventListener("click", () => {

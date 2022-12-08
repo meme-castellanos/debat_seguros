@@ -532,7 +532,7 @@ h1 {
   background: darkred;
   border-radius: 15px;
   text-align: center;
-  color: whitesmoke;
+  color: #f5f5f5;
   padding: 12px;
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -572,15 +572,31 @@ li {
   align-items: center;
   justify-content: center; }
 
-#datosCliente {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
+#datosCliente p {
+  font-family: "Quicksand", sans-serif;
   background-color: #a70016;
   max-width: 600px;
   border-radius: 20px;
-  border-radius: 20px; }
+  margin-top: 25px;
+  margin-bottom: 1rem;
+  font-size: 20px;
+  text-align: center;
+  color: #f5f5f5;
+  padding: 17px;
+  text-shadow: 1px 1px #423d3d;
+  letter-spacing: 1px; }
+
+#btnSalir {
+  position: relative;
+  left: 430px;
+  bottom: 48px;
+  width: auto;
+  height: auto; }
+
+.swal2-popup {
+  font-family: "Spinnaker", sans-serif;
+  color: #000000;
+  background-color: #ffffffb3; }
 
 @keyframes servicios {
   0%,

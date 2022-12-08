@@ -52,7 +52,7 @@
                         <input class="button w-100" id='btnIngresar' type="submit" value="Ingresar">
                         <br>
                         <label for="checkbox">Recordar mis datos</label>
-                        <input type="checkbox" id="check">
+                        <input type="checkbox" id="check" value="" name="checkbox">
                     </div>
                 </div>
                 <br>
@@ -88,6 +88,9 @@
         <section class="container justify-content-center hidden" id="registrado">
             <h1>Bienvenidos al Sistema de Debat Seguros</h1>
             <div class="container">
+                <div class="container flexCenter">
+                    <button class="button align-content-center" id="btnSalir" type="reset">Salir</button>
+                </div>
                 <form class="menuPrincipal" action="#">
                     <div class="menuP">
 
@@ -98,9 +101,6 @@
                         <button type="button" class="button" id="btnDatos">Datos del Cliente</button>
                     </div>
                 </form>
-                <div class="container flexCenter">
-                    <button class="button align-content-center" id="btnSalir" type="reset">Volver</button>
-                </div>
             </div>
         </section>
         <section class="hidden" id="mostrarCotizador">
@@ -122,9 +122,9 @@
 
         </div>
         <div class="mostrar">
-            <ul id="datosCliente">
+            <div id="datosCliente">
 
-            </ul>
+            </div>
         </div>
     </main>
     <footer>
